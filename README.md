@@ -11,7 +11,7 @@ RaspberryPi Python OLED so1602用ライブラリ
 
 モジュールのスレーブアドレスを設定します。最初に必ず使ってください。
 
-    so1602.command( command )
+    so1602.command( Command )
 
 各種コマンドを実行します。実行できるコマンドは[データシート](http://akizukidenshi.com/download/ds/sunlike/SO1602AWYB-UC-WB-U.pdf)を参照してください。
 
@@ -21,13 +21,14 @@ RaspberryPi Python OLED so1602用ライブラリ
 ディスプレイに文字列を表示します。文字列は必ずクォーテーションマークかアポストロフィーで囲んでください。表示できる文字は[so1602.py](https://github.com/YoutechA320U/RaspberryPi_Python_so1602_library/blob/master/so1602.py)を参照してください。
 
 ## 使用例
-    import so1602
-    so1602.setaddr(0x3c)
-    so1602.command(0x01)
-    so1602.command(0x80)
+    import so1602 #モジュールをインポート
+    so1602.setaddr(0x3c) #スレーブアドレスを0x3Cに設定
+    so1602.command(0x0c) #so1602をオン
+    so1602.command(0x01) #so1602のリセットコマンド
+    so1602.command(0x80) #カーソルを1行目の先頭に
     so1602.write("SO1602ナンダヨ!")
-    so1602.command(0xa0)
-    so1602.write("ΩΩΩ<ナ、ナンダッテー!?")
+    so1602.command(0xa0) #カーソルを2行目の先頭に
+    so1602.write('ΩΩΩ<ナ、ナンダッテー!?')
 
 
 ![SS](https://github.com/YoutechA320U/RaspberryPi_Python_so1602_library/blob/master/example.JPG "example")
