@@ -27,7 +27,7 @@
     so1602.command(0x80) #カーソルを1行目の先頭に
     so1602.write("SO1602ナンダヨ!")
     so1602.command(0xa0) #カーソルを2行目の先頭に
-    so1602.write('ΩΩΩ<ナ、ナンダッテー!?')
+    so1602.write("ΩΩΩ<ナ、ナンダッテー!?")
 
 
 ![SS](https://github.com/YoutechA320U/RaspberryPi_Python_so1602_library/blob/master/example.JPG "example")
