@@ -32,7 +32,7 @@
 
 ![SS](https://github.com/YoutechA320U/RaspberryPi_Python_so1602_library/blob/master/example.JPG "example")
 
-### 参考コード・資料
+### 参考資料
  * <http://akizukidenshi.com/download/ds/sunlike/SO1602AWYB-UC-WB-U.pdf>  
  * <http://www.newhavendisplay.com/app_notes/US2066.pdf>  
 
