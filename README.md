@@ -17,7 +17,7 @@ RaspberryPi Python OLED so1602用ライブラリ
     so1602.write("ΩΩΩ<ナ、ナンダッテー!?")
 
 
-![SS](https://github.com/YoutechA320U/UART-MIDI-Pi/blob/master/UART-MIDI.png "UART-MIDI_example")
+![SS](https://github.com/YoutechA320U/RaspberryPi_Python_so1602_library/blob/master/example.JPG "example")
 
 
 ## 備考
