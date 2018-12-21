@@ -24,7 +24,7 @@ RaspberryPi Python OLED so1602用ライブラリ
     import so1602 #モジュールをインポート
     so1602.setaddr(0x3c) #スレーブアドレスを0x3Cに設定
     so1602.command(0x0c) #so1602をオン
-    so1602.command(0x01) #so1602のリセットコマンド
+    so1602.command(0x01) #so1602をリセット
     so1602.command(0x80) #カーソルを1行目の先頭に
     so1602.write("SO1602ナンダヨ!")
     so1602.command(0xa0) #カーソルを2行目の先頭に
