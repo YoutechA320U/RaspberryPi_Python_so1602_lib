@@ -5,18 +5,8 @@ import time
 import sys
 
 i2c = smbus.SMBus(1)
-_command=0x00
-_data=0x40
-_clear=0x01
-_home=0x00+0x80
-display_On=0x0c
-display_Off=0x08
-display_on_No_Cursor=0x0c
-OLED_1stline=0x80
-OLED_2ndline=0xa0
 
 CHAR_TABLE = {
-    u'?': [0x10],
     u'†': [0x11],
     u'§': [0x12],
     u'¶': [0x13],
@@ -27,10 +17,10 @@ CHAR_TABLE = {
     u'Ξ': [0x18],
     u'Π': [0x19],
     u'Σ': [0x1a],
-    u'Φ': [0x1b],
-    u'Ψ': [0x1c],
-    u'Ω': [0x1d],
-    u'α': [0x1e],
+    u'Φ': [0x1c],
+    u'Ψ': [0x1d],
+    u'Ω': [0x1e],
+    u'α': [0x1f],
 
     u' ': [0x20],
     u'!': [0x21],
@@ -201,22 +191,9 @@ CHAR_TABLE = {
     u'゛': [0xde],
     u'゜': [0xdf],
 
-
-    u'α': [0xe0],
-    u'β': [0xe2],
-    u'ε': [0xe3],
-    u'μ': [0xe4],
-    u'δ': [0xe5],
-    u'ρ': [0xe6],
-    u'√': [0xe8],
-    
     u'＇':[0xf0],
     u'"':[0xf1],
-    u'°':[0xf2] ,
-    u'?': [0xf3],
-    u'?': [0xf4],
-    u'?': [0xf5],
-    u'?': [0xf6],
+    u'°':[0xf2],
     u'×': [0xf7],
     u'÷': [0xf8],
     u'≧': [0xf9],
@@ -256,11 +233,10 @@ CHAR_TABLE = {
 def setaddr( address ):
         global addr
         addr = address
-        return addr
 
 def command( code ):
         global addr
-        i2c.write_byte_data(addr, _command, code)
+        i2c.write_byte_data(addr, 0x00, code)
         time.sleep(0.0002)
         
 
@@ -272,4 +248,4 @@ def write( message ):
     for char in message:
         mojilist += CHAR_TABLE[char]
         time.sleep(0.00002)
-    i2c.write_i2c_block_data(addr, _data, mojilist)
+    i2c.write_i2c_block_data(addr, 0x40, mojilist)
