@@ -1,6 +1,6 @@
 # RaspberryPi_Python_so1602_lib
 ## 概要
-このライブラリは、RaspberryPiで[有機ELキャラクタディスプレイモジュール16x2行](http://akizukidenshi.com/catalog/g/gP-08277/)を扱いやすくするためのライブラリです。直接日本語(カタカナ)や一部特殊文字が使えます。
+このライブラリは、RaspberryPiで[SO1602 有機ELキャラクタディスプレイモジュール16x2行](http://akizukidenshi.com/catalog/g/gP-08277/)を扱いやすくするためのライブラリです。直接日本語(カタカナ)や一部特殊文字が使えます。
 
 
 ## 必要なライブラリ
